@@ -1,0 +1,28 @@
+{% load static %}
+
+<div class="header-container">
+    <header>
+        <h1>Bem-vindo à Página de Cadastros</h1>
+        <h2>Seja bem-vindo ao nosso site de cadastro! Aqui você pode facilmente gerenciar suas informações pessoais, atualizar seus dados quando necessário e encontrar tudo o que precisa para facilitar seu cadastro conosco. Estamos aqui para tornar sua experiência simples e eficiente. Explore nossos recursos e comece a cadastrar-se hoje mesmo!</h2>
+
+        <nav class="container">
+            <div class="options">
+                <a href="{% url 'home' %}" class="nav-link">Home</a>
+                <a href="{% url 'criar_usuario' %}" class="nav-link">Criar Usuário</a>
+                <a href="{% url 'atualiza_usuario' pk=1 %}">Atualizar Usuário</a>
+                <a href="{% url 'deletar_usuario' pk=1 %}">Deletar Usuário</a>
+                <a href="{% url 'listar_usuarios' %}" class="nav-link">Pesquisar Usuário</a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<style>
+    .options {
+        margin-top: 20px;
+    }
+
+    .options .nav-link {
+        margin-right: 20px;
+    }
+</style>

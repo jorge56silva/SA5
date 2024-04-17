@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletar Usuário</title>
+</head>
+
+{% include "usuarios/partials/header.html" %}
+
+<body>
+    <h1>Deletar Usuário</h1>
+    <p>Tem certeza que deseja deletar este usuário?</p>
+    <form action="/deletar" method="POST">
+        <input type="hidden" name="id" value="ID_DO_USUARIO_AQUI">
+        <input type="submit" value="Sim, Deletar">
+    </form>
+    <form action="/cancelar" method="GET">
+        <input type="submit" value="Cancelar">
+    </form>
+</body>
+</html>
